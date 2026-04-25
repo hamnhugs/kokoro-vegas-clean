@@ -2,97 +2,95 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>Kokoro Cleaning Service | Clean Home, Clean Heart</title>
-    <!-- Use Tailwind Play via CDN for development, but ensure it's not cached incorrectly -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kokoro Cleaning Service | Mobile-First</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet">
     <style>
-        /* CSS Reset for mobile browsers */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        /* ABSOLUTE MOBILE FIX */
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
         html, body { 
-            width: 100%; 
-            overflow-x: hidden; 
-            -webkit-text-size-adjust: 100%; 
-            background-color: #F9F7F2;
+            width: 100vw; 
+            margin: 0; 
+            padding: 0; 
+            overflow-x: hidden;
+            -webkit-text-size-adjust: 100%;
         }
         body { font-family: 'Quicksand', sans-serif; }
         .zen-title { font-family: 'Noto Serif JP', serif; }
 
-        /* Force mobile scaling via CSS if meta is ignored */
-        @media (max-width: 600px) {
-            .hero-title { font-size: 2.5rem !important; }
-            section { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
+        /* The 'Full Adapt' Logic */
+        @media screen and (max-width: 767px) {
+            h1 { font-size: 2.5rem !important; line-height: 1.1 !important; }
+            .hero-section { min-height: 70vh !important; padding: 2rem 1.5rem !important; }
+            nav { padding: 1.5rem !important; flex-direction: column !important; gap: 1rem !important; text-align: center !important; }
+            .grid-cols-mobile { grid-template-columns: 1fr !important; }
+            .mobile-hide { display: none !important; }
+            .sticky-btn { font-size: 10px !important; padding: 12px 20px !important; }
         }
-        
-        .sticky-safe { padding-bottom: env(safe-area-inset-bottom, 20px); }
     </style>
 </head>
-<body class="text-gray-800">
-    <!-- Fixed Mobile CTA (Absolute lock) -->
-    <div class="md:hidden fixed bottom-0 left-0 w-full z-[10000] bg-white border-t border-gray-200 shadow-2xl sticky-safe p-4 flex justify-between items-center">
-        <span class="zen-title text-[10px] font-bold tracking-widest text-[#6D4C41]">KOKORO</span>
-        <a href="tel:7027101201" class="bg-[#6D4C41] text-white px-6 py-3 rounded-full text-[10px] font-bold tracking-widest uppercase">Text / Call Now</a>
+<body class="bg-[#F9F7F2] text-gray-800">
+    <!-- Mobile Sticky Call -->
+    <div class="md:hidden fixed bottom-0 left-0 w-full z-[1000] bg-white border-t p-4 flex justify-between items-center shadow-lg">
+        <span class="zen-title text-[10px] font-bold text-[#6D4C41]">KOKORO</span>
+        <a href="tel:7027101201" class="bg-[#6D4C41] text-white px-5 py-3 rounded-full text-[10px] font-bold uppercase sticky-btn">Call Now</a>
     </div>
 
-    <!-- Nav -->
-    <nav class="p-6 md:p-10 flex justify-between items-center max-w-7xl mx-auto w-full">
+    <nav class="p-10 flex justify-between items-center max-w-7xl mx-auto w-full">
         <div class="zen-title text-2xl md:text-3xl text-[#6D4C41] flex items-center">
-            <img src="https://i0.wp.com/www.kokorocleaning.net/wp-content/uploads/2025/05/footer_logo-scaled-2.png?w=200" class="h-6 md:h-10 mr-3 grayscale" alt="">
+            <img src="https://i0.wp.com/www.kokorocleaning.net/wp-content/uploads/2025/05/footer_logo-scaled-2.png?w=200" class="h-8 md:h-10 mr-3 grayscale" alt="">
             KOKORO
         </div>
         <div class="hidden md:flex space-x-8 text-[10px] font-bold tracking-widest uppercase">
-            <a href="#">Process</a>
-            <a href="tel:7027101201">(702) 710-1201</a>
+            <a href="#">Philosophy</a>
+            <a href="#" class="bg-[#6D4C41] text-white px-6 py-2 rounded-sm tracking-widest leading-loose">(702) 710-1201</a>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <section class="w-full relative min-h-[80vh] flex items-center px-6 md:px-20 py-20 bg-gray-200 overflow-hidden">
-        <div class="absolute inset-0 bg-cover bg-center opacity-30 bg-[url('https://i0.wp.com/www.kokorocleaning.net/wp-content/uploads/2025/10/ChatGPT-Image-Oct-1-2025-11_00_20-AM.webp?w=1920')]"></div>
-        <div class="relative z-10 w-full max-w-4xl">
-            <h1 class="zen-title hero-title text-4xl md:text-8xl mb-6 leading-tight">Clean Home, <br>Clean Heart.</h1>
-            <p class="text-lg md:text-xl text-gray-600 font-light mb-10 max-w-xl">Deep Zen-inspired cleaning for the Las Vegas Valley. High-turnover Airbnb & Residential.</p>
-            <div class="flex flex-col md:flex-row gap-4">
-                <a href="#quote" class="bg-[#6D4C41] text-white px-10 py-5 rounded-sm font-bold text-xs tracking-widest uppercase text-center">Start Refresh</a>
+    <main class="w-full">
+        <section class="hero-section relative min-h-[80vh] flex items-center px-6 md:px-20 py-20 bg-gray-100 overflow-hidden">
+            <div class="absolute inset-0 bg-cover bg-center opacity-30 bg-[url('https://i0.wp.com/www.kokorocleaning.net/wp-content/uploads/2025/10/ChatGPT-Image-Oct-1-2025-11_00_20-AM.webp?w=1920')]"></div>
+            <div class="relative w-full">
+                <h1 class="zen-title text-5xl md:text-8xl mb-6">Clean Home, <br>Clean Heart.</h1>
+                <p class="text-lg md:text-xl text-gray-600 font-light mb-10 max-w-xl">Precision house cleaning for Las Vegas valley communities. We care for your heart, mind, and spirit.</p>
+                <div class="flex">
+                    <a href="#quote" class="bg-[#6D4C41] text-white px-10 py-5 rounded-sm font-bold text-xs uppercase tracking-widest">Start Refresh</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Grid -->
-    <section class="py-20 px-6 bg-white w-full">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div>
+        <section class="py-20 px-6 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 bg-white rounded-xl shadow-sm -mt-10 relative z-10 w-[90%] md:w-full">
+            <div class="text-center md:text-left">
                 <img src="https://i0.wp.com/www.kokorocleaning.net/wp-content/uploads/2025/10/tMqSC92pxaSahKbS1ZM7Vtp54vtYdsa1zJU1m9yL.jpg?w=600" class="w-full h-64 object-cover mb-6">
                 <h3 class="zen-title text-xl mb-4">Maid Service</h3>
-                <p class="text-gray-500 text-sm">Consistent weekly peace for your home.</p>
+                <p class="text-gray-500 text-sm">Consistent peace for your home.</p>
             </div>
-            <div>
+            <div class="text-center md:text-left">
                 <img src="https://i0.wp.com/www.kokorocleaning.net/wp-content/uploads/2025/10/D4zI1HV6Gv2MusSY0ym1Z2sShHBdDf2poZyVPVfq.jpg?w=600" class="w-full h-64 object-cover mb-6">
-                <h3 class="zen-title text-xl mb-4">Deep Ingestion</h3>
-                <p class="text-gray-500 text-sm">Meticulous sanitization for total resets.</p>
+                <h3 class="zen-title text-xl mb-4">Deep Clean</h3>
+                <p class="text-gray-500 text-sm">Resets for your entire space.</p>
             </div>
-            <div>
+            <div class="text-center md:text-left">
                 <img src="https://i0.wp.com/www.kokorocleaning.net/wp-content/uploads/2025/05/gallery_4_4.jpg?w=600" class="w-full h-64 object-cover mb-6">
-                <h3 class="zen-title text-xl mb-4">Heat Defense</h3>
-                <p class="text-gray-500 text-sm">Desert-specific allergen filtration.</p>
+                <h3 class="zen-title text-xl mb-4">Desert Spec</h3>
+                <p class="text-gray-500 text-sm">Allergen and dust defense.</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Form -->
-    <section id="quote" class="py-20 px-6 bg-[#F9F7F2] w-full">
-        <div class="max-w-xl mx-auto bg-white p-8 md:p-12 shadow-xl border-t-8 border-[#6D4C41]">
-            <h2 class="zen-title text-2xl mb-8 text-center uppercase tracking-widest">Request Quote</h2>
-            <form class="flex flex-col gap-6">
-                <input type="text" placeholder="Name" class="p-4 border-b border-gray-200 focus:outline-none text-xs tracking-widest uppercase">
-                <input type="email" placeholder="Email" class="p-4 border-b border-gray-200 focus:outline-none text-xs tracking-widest uppercase">
-                <button class="bg-[#6D4C41] text-white py-5 font-bold text-xs tracking-[.4em] uppercase">Submit</button>
-            </form>
-        </div>
-    </section>
+        <section class="py-20 px-6 bg-[#F9F7F2]">
+            <div class="max-w-xl mx-auto bg-white p-10 shadow-2xl border-t-4 border-[#6D4C41]">
+                <h2 class="zen-title text-2xl mb-8 text-center tracking-widest uppercase">Request Quote</h2>
+                <form id="quote" class="grid gap-6">
+                    <input type="text" placeholder="Name" class="p-4 border-b text-xs uppercase tracking-widest focus:outline-none">
+                    <input type="email" placeholder="Email" class="p-4 border-b text-xs uppercase tracking-widest focus:outline-none">
+                    <button class="bg-[#6D4C41] text-white py-5 font-bold text-xs uppercase tracking-[0.4em]">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
-    <footer class="p-10 text-center text-gray-300 text-[8px] tracking-[.5em] uppercase border-t border-gray-100">
+    <footer class="p-10 text-center text-gray-300 text-[8px] tracking-[0.4em] uppercase">
         &copy; 2026 KOKORO LV
     </footer>
 </body>
