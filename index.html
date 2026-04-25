@@ -12,72 +12,112 @@
         .bg-zen { background-color: #F9F7F2; }
         .text-zen-brown { color: #6D4C41; }
         .border-zen { border-color: #D7CCC8; }
+        .parallax { background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; }
     </style>
 </head>
 <body class="bg-zen text-gray-800">
     <!-- Navigation -->
     <nav class="p-8 flex justify-between items-center max-w-7xl mx-auto">
-        <div class="zen-title text-3xl tracking-tighter text-zen-brown">KOKORO <span class="font-light text-gray-400">CLEANING</span></div>
+        <div class="zen-title text-3xl tracking-tighter text-zen-brown flex items-center">
+            <img src="https://i0.wp.com/www.kokorocleaning.net/wp-content/uploads/2025/05/footer_logo-scaled-2.png?w=200" alt="Kokoro Logo" class="h-10 mr-4 grayscale contrast-125">
+            KOKORO <span class="font-light text-gray-400 ml-2">CLEANING</span>
+        </div>
         <div class="hidden md:flex space-x-10 text-xs uppercase tracking-widest font-bold">
             <a href="#" class="hover:text-zen-brown">Philosophy</a>
             <a href="#" class="hover:text-zen-brown">Our Process</a>
-            <a href="#" class="bg-zen-brown text-white px-6 py-2 rounded-sm" style="background-color: #6D4C41;">Book Now</a>
+            <a href="tel:7027101201" class="bg-zen-brown text-white px-6 py-2 rounded-sm" style="background-color: #6D4C41;">(702) 710-1201</a>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <section class="min-h-[70vh] flex items-center px-4 md:px-20">
-        <div class="max-w-3xl">
-            <span class="text-zen-brown font-bold tracking-widest uppercase text-xs">Las Vegas Premier Boutique Cleaning</span>
+    <!-- Hero with Real Background -->
+    <section class="relative h-[80vh] flex items-center px-4 md:px-20 parallax" style="background-image: url('https://i0.wp.com/www.kokorocleaning.net/wp-content/uploads/2025/10/ChatGPT-Image-Oct-1-2025-11_00_20-AM.webp?w=1920');">
+        <div class="absolute inset-0 bg-white/60"></div>
+        <div class="relative z-10 max-w-3xl">
+            <span class="text-zen-brown font-bold tracking-widest uppercase text-xs">20+ Years of Heart-Centered Service</span>
             <h1 class="zen-title text-6xl md:text-8xl mt-4 mb-8 leading-tight">Clean Home, <br>Clean Heart.</h1>
-            <p class="text-xl text-gray-500 font-light mb-10 max-w-xl">A Zen-inspired approach to professional house cleaning. We bring comfort, freshness, and peace of mind to Las Vegas homes.</p>
+            <p class="text-xl text-gray-700 font-light mb-10 max-w-xl">Founded by Akira Watanabe, we bring a Zen-inspired spirit to Las Vegas cleaning. We don't just clean homes—we care for families.</p>
             <div class="flex space-x-6">
-                <button class="bg-zen-brown text-white px-10 py-4 rounded-sm font-bold text-sm tracking-widest uppercase" style="background-color: #6D4C41;">View Rates</button>
-                <button class="border border-zen-brown text-zen-brown px-10 py-4 rounded-sm font-bold text-sm tracking-widest uppercase">Our Story</button>
+                <a href="#quote" class="bg-zen-brown text-white px-10 py-4 rounded-sm font-bold text-sm tracking-widest uppercase shadow-lg" style="background-color: #6D4C41;">Get a Quote</a>
+                <button class="bg-white/80 backdrop-blur-md border border-zen-brown text-zen-brown px-10 py-4 rounded-sm font-bold text-sm tracking-widest uppercase">Watch Video</button>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Social Proof Section -->
+    <section class="py-12 bg-white flex justify-center space-x-12 opacity-80 border-b border-zen">
+        <img src="https://i0.wp.com/www.kokorocleaning.net/wp-content/uploads/2025/09/google-1-1.webp?w=100" alt="Google 450+ 5-Star Reviews" class="h-12 grayscale">
+        <img src="https://i0.wp.com/www.kokorocleaning.net/wp-content/uploads/2025/09/bbb-1.webp?w=100" alt="BBB Accredited" class="h-12 grayscale">
+        <img src="https://i0.wp.com/www.kokorocleaning.net/wp-content/uploads/2025/09/facebook-2.webp?w=100" alt="Facebook Community" class="h-12 grayscale">
+    </section>
+
+    <!-- Services Grid with Real Assets -->
     <section class="py-32 bg-white">
-        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-20">
-            <div class="border-t border-zen pt-10">
-                <h3 class="zen-title text-2xl mb-4">Recurring Peace</h3>
-                <p class="font-light text-gray-500">Weekly and bi-weekly maid services designed for consistent freshness and mental clarity.</p>
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-12">
+            <div class="group overflow-hidden">
+                <img src="https://i0.wp.com/www.kokorocleaning.net/wp-content/uploads/2025/10/tMqSC92pxaSahKbS1ZM7Vtp54vtYdsa1zJU1m9yL.jpg?w=600" alt="Residential Cleaning" class="w-full h-64 object-cover group-hover:scale-105 transition duration-700 font-light grayscale-[50%]">
+                <h3 class="zen-title text-2xl mt-8 mb-4">Recurring Peace</h3>
+                <p class="font-light text-gray-500 text-sm leading-relaxed">Weekly and bi-weekly maid services designed for consistent freshness and mental clarity across the Las Vegas Valley.</p>
             </div>
-            <div class="border-t border-zen pt-10">
-                <h3 class="zen-title text-2xl mb-4">Deep Reset</h3>
-                <p class="font-light text-gray-500">A complete overhaul of your space. Meticulous dusting, polishing, and sanitization for a total reset.</p>
+            <div class="group overflow-hidden border-x border-zen px-6">
+                <img src="https://i0.wp.com/www.kokorocleaning.net/wp-content/uploads/2025/10/D4zI1HV6Gv2MusSY0ym1Z2sShHBdDf2poZyVPVfq.jpg?w=600" alt="Commercial Cleaning" class="w-full h-64 object-cover group-hover:scale-105 transition duration-700 grayscale-[50%]">
+                <h3 class="zen-title text-2xl mt-8 mb-4">Commercial Serenity</h3>
+                <p class="font-light text-gray-500 text-sm leading-relaxed">Elevate your workspace. High-quality commercial cleaning that creates a productive, inviting environment for staff and patrons.</p>
             </div>
-            <div class="border-t border-zen pt-10">
-                <h3 class="zen-title text-2xl mb-4">Desert Defense</h3>
-                <p class="font-light text-gray-500">Specialized Las Vegas protocols targeting fine desert dust and environmental allergens.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Personal Touch / Info Ingested from Maps -->
-    <section class="py-20 bg-zen">
-        <div class="max-w-4xl mx-auto text-center px-4">
-            <h2 class="zen-title text-4xl mb-6">Proudly Asian-Owned & Locally Managed</h2>
-            <p class="italic text-gray-600 mb-10 leading-relaxed">"A clean home isn’t just about appearance — it’s about how you feel the moment you walk in. Let us handle the cleaning, so you can enjoy your home."</p>
-            <div class="flex justify-center space-x-12 grayscale opacity-50">
-                <span class="text-sm font-bold tracking-widest uppercase">Verified 5.0 Rating</span>
-                <span class="text-sm font-bold tracking-widest uppercase">Serving Russell Rd & Beyond</span>
-                <span class="text-sm font-bold tracking-widest uppercase">HEPA Filter Systems</span>
+            <div class="group overflow-hidden">
+                <img src="https://i0.wp.com/www.kokorocleaning.net/wp-content/uploads/2025/05/gallery_4_4.jpg?w=600" alt="Deep Cleaning" class="w-full h-64 object-cover group-hover:scale-105 transition duration-700 grayscale-[50%]">
+                <h3 class="zen-title text-2xl mt-8 mb-4">Desert Defense</h3>
+                <p class="font-light text-gray-500 text-sm leading-relaxed">Specialized post-construction and climate-specific cleaning targeting fine Nevada dust and strip-context allergens.</p>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section class="py-40 text-center">
-        <h2 class="zen-title text-5xl mb-12">Start your refresh today.</h2>
-        <p class="mb-10 text-zen-brown font-bold">(702) 710-1201</p>
-        <button class="bg-zen-brown text-white px-16 py-6 rounded-sm font-bold text-sm tracking-widest uppercase" style="background-color: #6D4C41;">Request 30-Second Quote</button>
+    <!-- The Heart of the Business -->
+    <section class="py-24 bg-zen">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-16">
+            <div class="w-full md:w-1/2">
+                <img src="https://i0.wp.com/www.kokorocleaning.net/wp-content/uploads/2025/09/Akira-And-AJ-Kokoro+Cleaning.png?w=600" alt="Akira Watanabe" class="rounded-sm shadow-2xl grayscale-[20%] border-4 border-white">
+            </div>
+            <div class="w-full md:w-1/2">
+                <h2 class="zen-title text-4xl mb-6">A Legacy of Heart</h2>
+                <p class="font-light text-gray-600 leading-relaxed mb-6">"My name is Akira Watanabe. For more than 20 years, I’ve traveled the world as a counselor. I discovered that what we all seek most is a genuine connection of heart. We don’t just clean homes—we restore the gentle feeling of harmony every home deserves."</p>
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-[1px] bg-zen-brown"></div>
+                    <span class="text-xs font-bold tracking-[0.3em] uppercase text-zen-brown">Meet Akira & the Team</span>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer class="p-10 text-center text-gray-300 text-[10px] tracking-[0.5em] uppercase">
-        &copy; 2026 Kokoro Cleaning Las Vegas. Design with AI Engine.
+    <!-- Gallery Reveal -->
+    <section class="py-20 bg-white overflow-hidden">
+        <div class="flex space-x-4 animate-scroll">
+            <img src="https://i0.wp.com/www.kokorocleaning.net/wp-content/uploads/2025/05/gallery_4_1.jpg?w=300" class="h-64 rounded-sm">
+            <img src="https://i0.wp.com/www.kokorocleaning.net/wp-content/uploads/2025/05/gallery_4_2.jpg?w=300" class="h-64 rounded-sm">
+            <img src="https://i0.wp.com/www.kokorocleaning.net/wp-content/uploads/2025/05/gallery_4_6.jpg?w=300" class="h-64 rounded-sm">
+            <img src="https://i0.wp.com/www.kokorocleaning.net/wp-content/uploads/2025/05/gallery_4_3.jpg?w=300" class="h-64 rounded-sm">
+            <img src="https://i0.wp.com/www.kokorocleaning.net/wp-content/uploads/2025/05/gallery_4_5.jpg?w=300" class="h-64 rounded-sm">
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section id="quote" class="py-32 bg-zen">
+        <div class="max-w-xl mx-auto bg-white p-12 rounded-sm shadow-2xl border-t-8 border-zen-brown">
+            <h2 class="zen-title text-3xl mb-8 text-center uppercase tracking-widest">Connect Your Heart to Ours</h2>
+            <form class="space-y-6">
+                <input type="text" placeholder="Your Name" class="w-full p-4 bg-zen/30 border-b border-zen focus:outline-none focus:border-zen-brown text-sm">
+                <input type="email" placeholder="Email Address" class="w-full p-4 bg-zen/30 border-b border-zen focus:outline-none focus:border-zen-brown text-sm">
+                <select class="w-full p-4 bg-zen/30 border-b border-zen focus:outline-none focus:border-zen-brown text-sm uppercase tracking-widest text-[10px] font-bold">
+                    <option>Home Refresh</option>
+                    <option>Deep Reset</option>
+                    <option>Commercial Serenity</option>
+                </select>
+                <button class="w-full bg-zen-brown text-white py-5 rounded-sm font-bold text-xs tracking-[0.4em] uppercase hover:opacity-90 transition">Send Quote Request</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="p-10 text-center text-gray-300 text-[10px] tracking-[0.5em] uppercase border-t border-zen">
+        &copy; 2026 Kokoro Cleaning Las Vegas. 心 Inspired.
     </footer>
 </body>
 </html>
